@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body{
+  background-color: black;
+  color: white;
+}
+.Name , .regnumber , .bagnumber , .email , .password{
+  display: flex;
+  flex-direction: column;
+  margin: 13px;
+
+}
+.form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.inputfields{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.btn{
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+}
+input{
+  color: black;
+  padding: 8px;
+}
