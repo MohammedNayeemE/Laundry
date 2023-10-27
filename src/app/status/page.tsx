@@ -30,7 +30,7 @@ const Status = ()=>{
        setisLoading(true);
        setTimeout(() => {
         fetchStatus(bg);
-    }, 2000);
+    }, 1000);
        
 
   }

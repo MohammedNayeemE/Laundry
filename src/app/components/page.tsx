@@ -1,6 +1,8 @@
+// login page
+
 "use client";
 import { useState } from 'react';
-import { signInWithEmail } from './login';
+import { signInWithEmail } from './signin';
 
 const Login = () => {
   const [regnumber, setRegnumber] = useState('');
@@ -9,7 +11,9 @@ const Login = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
     
-    await signInWithEmail({email , password});
+    const response = await signInWithEmail({email , password});
+
+    if(response !== null) alert("Logged IN");
 
     setEmail('');
     setPassword('');

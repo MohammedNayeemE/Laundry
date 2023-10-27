@@ -1,10 +1,10 @@
-
+//registration page
 "use client";
 import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { Fetch } from '../../lib/serveractions';
 import {signup} from './components/signup';
 import { supabase } from '../../supabase'
-import { NextResponse } from 'next/server';
+
 export default function Home(){
   
   const [email , setemail] = useState('');
@@ -15,24 +15,20 @@ export default function Home(){
   const [Name , setname] = useState('');
   let student_id = Math.floor(Math.random() * 50);
   
-  const update = async () =>{
-    const response = await supabase
-    .from('StudentDetails')
-    .insert([{ student_id ,  regnumber , Name , email , submissionday , bag_number }])
-    .select()
-
-    if(response.error){
-      console.error('error occured' , response.error.message);
-      return;
+  const update = async () =>{ 
+    const response:any = await Fetch({student_id , regnumber , Name , email , submissionday , bag_number });
+    if(!null){
+      alert("Updated");
     }
     else{
-      console.log('Updated');
-      
+      return;
     }
-  }
+
+}
+
   const handleSubmit = async (e:any)=>{
     e.preventDefault();
-    //console.log(email , password);
+    
     await update();
     
     await signup({email , password});

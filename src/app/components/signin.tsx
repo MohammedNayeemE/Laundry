@@ -1,6 +1,10 @@
+//login function
+
+"use server"
+
 import { error } from 'console';
 import { supabase } from '../../../supabase';
-import { NextResponse } from 'next/server';
+
 
 interface loginprams{
     email:string,
@@ -15,12 +19,12 @@ async function signInWithEmail({email , password} : loginprams) {
     })
     if(response.error){
         console.error('login error' ,response.error.message);
-        return;
+        return null;
         
     }
     else{
         console.log('Logged In');
-        NextResponse.redirect('http://localhost:3000/home');
+        
         
     }
 
