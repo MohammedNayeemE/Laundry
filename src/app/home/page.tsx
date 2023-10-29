@@ -1,27 +1,30 @@
-import NavBar from "../components/NavBar"
-import Image from "next/image";
+
+import Header from "../components/Header";
+import About from "../components/About";
+import UIStatus from "../components/Status";
+import Contact from "../components/Contact";
+
 const Home = ()=>{
   return(
   <>
 
-  <header>
-    <NavBar/>
-    <div className="hero" >
-      <div className="textcontent" style={{margin:'10px'}}>
-         <div style={{fontSize:'68px' , padding:'5px'}}>
-         For The Students By the <span style={{color:'aqua'}}>Students</span>
-         </div>
-      <div style={{margin:'10px' , padding:'5px'}}>
-      
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fuga omnis minima. Modi, rem tempora perspiciatis laborum, expedita aut reprehenderit ipsam architecto eveniet repellendus nihil?
-      
-      </div>
-      </div>
-      <div className="heroimage" style={{margin:'10px'}}>
-        <img src="chefewa.jpg" alt="heroimage" style={{width:'650px' , height:'350px'}}/>
-      </div>
+  <Header/>
+  <section style={{margin:'10px' ,padding:'7px' , marginTop:'10%' , display:'flex' ,justifyContent:'center' , alignItems:'center' , flexDirection:'column'}}>
+   
+    <div className="h-36 w-1 bg-white mt-2 mb-2"></div>
+    <div style={{fontSize :'58px' , color:'aqua'}}>
+      STATUS
     </div>
-  </header>
+    <div className="h-36 w-1 bg-white mt-2 mb-2"></div>
+    <UIStatus/>
+      <div className="h-36 w-1 bg-white mt-2 mb-2"></div>
+      <About/>
+      <div className="h-36 w-1 bg-white mt-2 mb-2"></div>
+      <Contact/>
+      <div className="h-36 w-1 bg-white mt-2 mb-2"></div>
+
+  </section>
+  
   
   
   </>
@@ -48,4 +51,8 @@ export default Home;
         console.error('Error fetching session data:', error);
       }
     };
+    <div className="imagesection" style={{width:'555px' , height:'355px'}}>
+      <img src="nacheri.jpg" alt="sectionimg" style={{width:'100%'}} />
+    
+    </div>
 */

@@ -7,6 +7,7 @@
 body{
   background-color: black;
   color: white;
+  
 }
 .Name , .regnumber , .bagnumber , .email , .password{
   display: flex;
@@ -71,6 +72,16 @@ li:hover{
   justify-content: center;
   align-items: center;
   margin-top: 5%;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
+  padding: 17px;
+}
+.hero1{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  /*border: 1px solid white;*/
+  padding: 17px;
 }
 

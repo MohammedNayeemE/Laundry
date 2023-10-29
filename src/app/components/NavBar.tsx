@@ -9,10 +9,10 @@ const NavBar = ()=>{
             BRAND
         </div>
         <div className='navlist'>
-            <li>Home</li>
-            <li>About</li>
-            <li>ContactUs</li>
-            <li>Status</li>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>CONTACTUS</li>
+            <li>STATUS</li>
             
         </div>
         <div className='profile' style={{marginRight:'5px' , border:'2px solid white' , padding:'15px' , cursor:'pointer'}}>
