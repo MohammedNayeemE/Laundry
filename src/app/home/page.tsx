@@ -1,14 +1,40 @@
-"use client";
-import { useState , useEffect } from "react";
-import SideNavBar from '../components/NavBar';
-
-import { supabase } from "../../../supabase";
-
+import NavBar from "../components/NavBar"
+import Image from "next/image";
 const Home = ()=>{
-    const [session, setSession] = useState<any | null>(null);
-    const [isSideNavbarOpen, setIsSideNavbarOpen] = useState(false);
+  return(
+  <>
 
-  useEffect(() => {
+  <header>
+    <NavBar/>
+    <div className="hero" >
+      <div className="textcontent" style={{margin:'10px'}}>
+         <div style={{fontSize:'68px' , padding:'5px'}}>
+         For The Students By the <span style={{color:'aqua'}}>Students</span>
+         </div>
+      <div style={{margin:'10px' , padding:'5px'}}>
+      
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fuga omnis minima. Modi, rem tempora perspiciatis laborum, expedita aut reprehenderit ipsam architecto eveniet repellendus nihil?
+      
+      </div>
+      </div>
+      <div className="heroimage" style={{margin:'10px'}}>
+        <img src="chefewa.jpg" alt="heroimage" style={{width:'650px' , height:'350px'}}/>
+      </div>
+    </div>
+  </header>
+  
+  
+  </>
+  );
+
+
+  
+}
+
+export default Home;
+
+
+/*
     const fetchSession = async () => {
       try {
         const { data, error } = await supabase.auth.getUser();
@@ -22,29 +48,4 @@ const Home = ()=>{
         console.error('Error fetching session data:', error);
       }
     };
-
-    fetchSession();
-  }, []);
-
-  const openSideNavbar = () => {
-    setIsSideNavbarOpen(true);
-  };
-    return(
-        <>
-        {session && <SideNavBar details = {session.user.email}  />}
-        
-        <div className="bigcontainer" style={{display:'flex' , flexDirection:'row', justifyContent:'center' , alignItems:'center',height:'100vh' , margin:'10px' }}>
-        <div className="container" style={{border:'1px solid white' , borderRadius:'8px' ,padding:'3px' , height:'200px', display:'flex' ,width:'50%', flexDirection:'column'
-         ,  justifyContent:'center' , alignItems:'center' , margin:'10px', cursor:'pointer' }} onClick={openSideNavbar}>
-            <h2>My Profile</h2>
-        </div>
-        <div className="container" style={{border:'1px solid white' , borderRadius:'8px' ,padding:'3px' , height:'200px',width:'50%' ,  display:'flex' , flexDirection:'column'
-         ,  justifyContent:'center' , alignItems:'center' , margin:'10px' , cursor:'pointer' }}>
-            <h2>Know My Status</h2>
-        </div>
-        </div>
-        
-        </>
-    )
-}
-export default Home;
+*/
