@@ -2,7 +2,7 @@
 
 "use client";
 import { useState } from 'react';
-import { signInWithEmail } from './signin';
+import { signInWithEmail } from '../../../lib/signinupactions/signin';
 
 const Login = () => {
   const [regnumber, setRegnumber] = useState('');

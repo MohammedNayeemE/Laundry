@@ -10,9 +10,9 @@
   
 }
 body{
- /* background-color: black;*/
+  background-color: black;
   color: white;
-  background: linear-gradient(black ,rgb(27, 24, 24) ,rgb(54, 153, 153) ,rgb(27, 24, 24) ,black );
+  
   
   
 }

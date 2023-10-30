@@ -2,7 +2,7 @@
 "use client";
 import { useState } from 'react';
 import { Fetch } from '../../lib/serveractions';
-import {signup} from './components/signup';
+import {signup} from '../../lib/signinupactions/signup';
 import { supabase } from '../../supabase'
 
 export default function Home(){

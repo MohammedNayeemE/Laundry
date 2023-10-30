@@ -27,5 +27,23 @@ const  Fetch  = async  ({student_id , regnumber , Name , email , submissionday ,
     }
   }
 
+  const fetchStatus = async (bg:any) => {
+    const { data, error } = await supabase
+        .from('LaundryDetails')
+        .select('status')
+        .eq('bag_number' ,bg)
+        .single()
+    
+    if (error) {
+        console.error('Supabase error:', error.message);
+        return null;
+    }
+    
+    return data;
+    
+    
+};
+
 
   export {Fetch};
+  export {fetchStatus};

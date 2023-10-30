@@ -1,9 +1,9 @@
 // signup function
 
 "use server"
-import { supabase } from '../../../supabase';
+import { supabase } from '../../supabase';
 
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
+
 interface loginprams{
     email:string,
     password:string

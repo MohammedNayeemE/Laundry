@@ -2,8 +2,8 @@
 
 "use server"
 
-import { error } from 'console';
-import { supabase } from '../../../supabase';
+
+import { supabase } from '../../supabase';
 
 
 interface loginprams{
