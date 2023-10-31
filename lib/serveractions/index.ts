@@ -11,6 +11,7 @@ interface detailparams{
     submissionday : string,
     bag_number : string
 }
+//insert into the table
 const  Fetch  = async  ({student_id , regnumber , Name , email , submissionday , bag_number}:detailparams ) => {
     const response = await supabase
     .from('StudentDetails')
@@ -26,7 +27,7 @@ const  Fetch  = async  ({student_id , regnumber , Name , email , submissionday ,
       
     }
   }
-
+//laundry status
   const fetchStatus = async (bg:any) => {
     const { data, error } = await supabase
         .from('LaundryDetails')
@@ -43,7 +44,45 @@ const  Fetch  = async  ({student_id , regnumber , Name , email , submissionday ,
     
     
 };
+//session fetch
+/*
+    const fetchSession = async () => {
+      try {
+        const { data, error } = await supabase.auth.getUser();
 
+        if (error) {
+          console.error('Error fetching session data:', error);
+          return null;
+        } 
 
+        return data
+      } catch (error) {
+        console.error('Error fetching session data:', error);
+        return null;
+      }
+    };
+
+  */
+
+    const fetchuserdetails = async (email:string) =>{
+      
+        const {data , error} = await supabase
+        .from('StudentDetails')
+        .select()
+        .eq('email' , email)
+         
+        if (error) {
+          console.error('Supabase error:', error.message);
+          return null
+        }
+        console.log("fetched");
+        console.log(data);
+        
+        return data;
+      
+      
+    }
+  export {fetchuserdetails};
+  
   export {Fetch};
   export {fetchStatus};

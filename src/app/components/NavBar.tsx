@@ -1,5 +1,6 @@
 import './components.css';
 
+
 const NavBar = ()=>{
     return(
         <>
@@ -15,11 +16,12 @@ const NavBar = ()=>{
             <li>STATUS</li>
             
         </div>
-        <div className='profile' style={{marginRight:'5px' , border:'2px solid white' , padding:'15px' , cursor:'pointer'}}>
-                <p >PROFILE</p>
-        </div>
+        <div className='profile' style={{marginRight:'5px' , border:'2px solid white' , padding:'15px' , cursor:'pointer'}} >
+                    <p >PROFILE</p>
+            </div>
         </div>
     </nav>
+    
     </>
     )
 }

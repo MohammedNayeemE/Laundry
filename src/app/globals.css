@@ -10,8 +10,8 @@
   
 }
 body{
-  background-color: black;
-  color: white;
+  background-color: black ;
+  color: white ;
   
   
   
@@ -41,12 +41,16 @@ body{
   align-items: center;
   height: 100vh;
 }
-.btn{
+.btn {
   background-color: white;
-  color: black;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
   padding: 8px;
+}
+.btn:hover{
+  border: 1px solid white;
+  border-radius: 8px;
 }
 input{
   color: black;
