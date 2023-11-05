@@ -38,22 +38,3 @@ const Home = ()=>{
 export default Home;
 
 
-/*
-    const fetchSession = async () => {
-      try {
-        const { data, error } = await supabase.auth.getUser();
-
-        if (error) {
-          console.error('Error fetching session data:', error);
-        } else {
-          setSession(data);
-        }
-      } catch (error) {
-        console.error('Error fetching session data:', error);
-      }
-    };
-    <div className="imagesection" style={{width:'555px' , height:'355px'}}>
-      <img src="nacheri.jpg" alt="sectionimg" style={{width:'100%'}} />
-    
-    </div>
-*/
