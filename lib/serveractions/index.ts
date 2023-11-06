@@ -44,25 +44,7 @@ const  Fetch  = async  ({student_id , regnumber , Name , email , submissionday ,
     
     
 };
-//session fetch
-/*
-    const fetchSession = async () => {
-      try {
-        const { data, error } = await supabase.auth.getUser();
 
-        if (error) {
-          console.error('Error fetching session data:', error);
-          return null;
-        } 
-
-        return data
-      } catch (error) {
-        console.error('Error fetching session data:', error);
-        return null;
-      }
-    };
-
-  */
 
     const fetchuserdetails = async (email:string) =>{
       
